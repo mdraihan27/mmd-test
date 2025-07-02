@@ -1,0 +1,333 @@
+/* Professional color palette */
+:root {
+  --primary: #222831;
+  --secondary: #393E46;
+  --accent: #948979;
+  --light: #DFD0B8;
+  --white: #ffffff;
+  --text-dark: #222831;
+  --text-light: #666;
+  --border: #e1e5e9;
+  --success: #4b473b;
+  --shadow: rgba(34, 40, 49, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    background: linear-gradient(135deg, var(--light) 0%, #f8f6f0 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 8px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h3.logo {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 100px);
+}
+
+.page-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+#meal-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.meal-info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.meal-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(34, 40, 49, 0.15);
+}
+
+.meal-header h3.meal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.meal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.meal-type {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.meal-price {
+    font-size: 1.3rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.form-container {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px var(--shadow);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.form-date {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.meal-selection-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.meal-selection-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: border-color 0.3s ease;
+}
+
+.meal-selection-card:hover {
+    border-color: var(--accent);
+}
+
+.meal-selection-header {
+    margin-bottom: 1.5rem;
+}
+
+.meal-checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.styled-checkbox {
+    display: none;
+}
+
+.checkmark {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.styled-checkbox:checked + .checkmark {
+    background: var(--success);
+    border-color: var(--success);
+}
+
+.styled-checkbox:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.token-type-section {
+    padding-left: 2.5rem;
+}
+
+.token-type-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.radio-options {
+    display: flex;
+    gap: 2rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    gap: 0.8rem;
+}
+
+.styled-radio {
+    display: none;
+}
+
+.radio-checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.styled-radio:checked + .radio-checkmark {
+    border-color: var(--success);
+    background: var(--success);
+}
+
+.styled-radio:checked + .radio-checkmark::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--white);
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(34, 40, 49, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(34, 40, 49, 0.3);
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    #meal-info-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .radio-options {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .token-type-section {
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem 0.5rem;
+    }
+    
+    .page-header {
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    .meal-info-card,
+    .meal-selection-card {
+        padding: 1.5rem;
+    }
+}

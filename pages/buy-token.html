@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMH Dining | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/buy-token.css">
+    <link rel="stylesheet" href="../styles/common-messages.css">
+</head>
+
+<body>
+    <div class="global-message-container">
+        <div id="successMessage" class="global-message success-message"></div>
+        <div id="errorMessage" class="global-message error-message"></div>
+        <div id="infoMessage" class="global-message info-message"></div>
+        <div id="warningMessage" class="global-message warning-message"></div>
+    </div>
+    <header>
+        <h3 class="logo" onclick="window.location.href='index.html'">MM Hall Dining</h3>
+    </header>
+    <main>
+        <div class="page-wrapper">
+            <div class="page-header">
+                <h2 class="page-title">Purchase Dining Tokens</h2>
+                <p class="page-subtitle">Select your meals for tomorrow</p>
+                <div class="form-date" id="nextDayDate"></div>
+            </div>
+            
+            <div id="meal-info-container">
+                <div class="meal-info-card">
+                    <div class="meal-header">
+                        <h3 class="meal-title">Lunch</h3>
+                    </div>
+                    <div class="meal-details">
+                        <p id="lunch-type" class="meal-type">Loading...</p>
+                        <p id="lunch-price" class="meal-price">--</p>
+                    </div>
+                </div>
+                <div class="meal-info-card">
+                    <div class="meal-header">
+                        <h3 class="meal-title">Dinner</h3>
+                    </div>
+                    <div class="meal-details">
+                        <p id="dinner-type" class="meal-type">Loading...</p>
+                        <p id="dinner-price" class="meal-price">--</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form id="buyTokenForm">
+                    <div class="meal-selection-wrapper">
+                        <div class="meal-selection-card">
+                            <div class="meal-selection-header">
+                                <label class="meal-checkbox-label">
+                                    <input type="checkbox" id="dinner-checkbox" class="styled-checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="meal-name">Dinner</span>
+                                </label>
+                            </div>
+                            <div class="token-type-section">
+                                <p class="token-type-label">Token Type:</p>
+                                <div class="radio-options">
+                                    <label class="radio-option">
+                                        <input type="radio" name="dinner-token-type" id="dinner-token-type-chicken" value="chicken" class="styled-radio">
+                                        <span class="radio-checkmark"></span>
+                                        <span>Chicken</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="dinner-token-type" id="dinner-token-type-fish" value="fish" class="styled-radio">
+                                        <span class="radio-checkmark"></span>
+                                        <span>Fish</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-selection-card">
+                            <div class="meal-selection-header">
+                                <label class="meal-checkbox-label">
+                                    <input type="checkbox" id="lunch-checkbox" class="styled-checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="meal-name">Lunch</span>
+                                </label>
+                            </div>
+                            <div class="token-type-section">
+                                <p class="token-type-label">Token Type:</p>
+                                <div class="radio-options">
+                                    <label class="radio-option">
+                                        <input type="radio" name="lunch-token-type" id="lunch-token-type-chicken" value="chicken" class="styled-radio">
+                                        <span class="radio-checkmark"></span>
+                                        <span>Chicken</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="lunch-token-type" id="lunch-token-type-fish" value="fish" class="styled-radio">
+                                        <span class="radio-checkmark"></span>
+                                        <span>Fish</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary" id="buy-token-button">
+                            Purchase Tokens
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="../scripts/buy-token.js"></script>
+    <script>
+        // Set next day's date in the page header
+        const nextDay = new Date();
+        nextDay.setDate(nextDay.getDate() + 1);
+        const day = String(nextDay.getDate()).padStart(2, '0');
+        const month = String(nextDay.getMonth() + 1).padStart(2, '0');
+        const year = nextDay.getFullYear();
+        document.getElementById('nextDayDate').textContent = `${day}-${month}-${year}`;
+    </script>
+</body>
+
+</html>

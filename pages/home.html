@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMH Dining | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../styles/home.css" />
+  <link rel="stylesheet" href="../styles/common-messages.css" />
+</head>
+
+<body>
+  <div class="global-message-container">
+    <div id="successMessage" class="global-message success-message"></div>
+    <div id="errorMessage" class="global-message error-message"></div>
+    <div id="infoMessage" class="global-message info-message"></div>
+    <div id="warningMessage" class="global-message warning-message"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <h3 class="logo" onclick="window.location.href='home.html'">MM Hall Dining</h3>
+      <div class="account-bar">
+        <span class="profile-icon"><i class="fas fa-user-circle"></i></span>
+        <p id="account-name"></p>
+        <button id="logoutButton" class="btn logout-btn">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+      <div class="page-header">
+        <h2 class="page-title">Dashboard</h2>
+        <p class="page-subtitle">Manage your dining experience</p>
+      </div>
+      
+      <div class="dashboard-content">
+        <div class="balance-section">
+          <div class="balance-card">
+            <div class="balance-header">
+              <i class="fas fa-coins balance-icon"></i>
+              <span class="balance-label">Current Balance</span>
+            </div>
+            <div class="balance-amount" id="account-balance">৳ 0.00</div>
+          </div>
+        </div>
+
+        <div class="actions-section">
+          <h3 class="section-title">Quick Actions</h3>
+          <div class="action-cards">
+            <div class="action-card" onclick="window.location.href='buy-token.html'">
+              <div class="action-icon">
+                <i class="fas fa-ticket-alt"></i>
+              </div>
+              <div class="action-content">
+                <h4 class="action-title">Buy Tokens</h4>
+                <p class="action-description">Purchase dining tokens for meals</p>
+              </div>
+            </div>
+            
+            <div class="action-card" onclick="window.location.href='my-tokens.html'">
+              <div class="action-icon">
+                <i class="fas fa-list"></i>
+              </div>
+              <div class="action-content">
+                <h4 class="action-title">My Tokens</h4>
+                <p class="action-description">View and manage your tokens</p>
+              </div>
+            </div>
+            
+            <div class="action-card" id="addBalanceBtn">
+              <div class="action-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <div class="action-content">
+                <h4 class="action-title">Add Balance</h4>
+                <p class="action-description">Top up your account balance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+   <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2025 MM Hall Dining Management Application | <a class="footer-link"
+                    href="https://github.com/mdraihan27">github.com/mdraihan27</a> | All rights reserved.</p>
+        </div>
+
+    </footer>
+  <script type="module" src="../scripts/home.js"></script>
+</body>
+</html>

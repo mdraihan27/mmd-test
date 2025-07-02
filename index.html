@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMH Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="/styles/common-messages.css">
+</head>
+
+<body>
+    <div class="global-message-container">
+        <div id="successMessage" class="global-message success-message"></div>
+        <div id="errorMessage" class="global-message error-message"></div>
+        <div id="infoMessage" class="global-message info-message"></div>
+        <div id="warningMessage" class="global-message warning-message"></div>
+    </div>
+    <header>
+        <div class="header-content">
+            <h3 class="logo" onclick="window.location.href='index.html'">MM Hall Dining</h3>
+            <nav class="nav-buttons">
+                <button class="btn-nav btn-signup" onclick="window.location.href='/pages/signup.html'">Sign Up</button>
+                <button class="btn-nav btn-login" onclick="window.location.href='/pages/login.html'">Login</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="page-wrapper">
+            <div class="hero-section">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="assets/index/images/mmh3.png" alt="Dining Hall 1" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/index/images/mmh2.jpg" alt="Dining Hall 2" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/index/images/mmh1.jpg" alt="Dining Hall 3" />
+                        </div>
+                        <button class="carousel-controls prev">&#x276e;</button>
+                        <button class="carousel-controls next">&#x276f;</button>
+                    </div>
+                </div>
+
+                <div class="hero-content">
+                    <p class="welcome-text">Welcome to</p>
+                    <h1 class="hero-title">Munshi Meherullah Hall Dining Management Application</h1>
+                    <button class="btn btn-primary" onclick="window.location.href='/pages/login.html'">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <div class="about-card">
+                    <h2 class="about-title">About Munshi Meherullah Hall</h2>
+                    <p class="about-description">
+                        Munshi Meherullah Hall is one of the prominent residential halls at Jashore University of
+                        Science and Technology (JUST). Named after the renowned social reformer Munshi Meherullah, the
+                        hall provides accommodation and essential facilities for male students of the university. The
+                        hall is dedicated to fostering a supportive and disciplined environment, encouraging academic
+                        excellence and personal development among its residents. With modern amenities and a focus on
+                        student welfare, Munshi Meherullah Hall plays a vital role in campus life at JUST.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2025 MM Hall Dining Management Application | <a class="footer-link"
+                    href="https://github.com/mdraihan27">github.com/mdraihan27</a> | All rights reserved.</p>
+        </div>
+
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
