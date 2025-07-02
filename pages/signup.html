@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMH Dining | Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" href="../styles/common-messages.css">
+</head>
+
+<body>
+    <div class="global-message-container">
+        <div id="successMessage" class="global-message success-message"></div>
+        <div id="errorMessage" class="global-message error-message"></div>
+        <div id="infoMessage" class="global-message info-message"></div>
+        <div id="warningMessage" class="global-message warning-message"></div>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <h3 class="logo" onclick="window.location.href='index.html'">MM Hall Dining</h3>
+        </div>
+    </header>
+    
+    <main>
+        <div class="page-wrapper">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2 class="auth-title">Create Account</h2>
+                        <p class="auth-subtitle">Join MMH Hall Dining today</p>
+                    </div>
+                    
+                    <form id="signupForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your JUST email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Create a password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Confirm your password" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Create Account</span>
+                            <span class="btn-loading" style="display: none;">
+                                <span class="spinner"></span>
+                                Creating Account...
+                            </span>
+                        </button>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="login.html" class="link-primary">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+      <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2025 MM Hall Dining Management Application | <a class="footer-link"
+                    href="https://github.com/mdraihan27">github.com/mdraihan27</a> | All rights reserved.</p>
+        </div>
+
+    </footer>
+    
+    <script type="module" src="../scripts/signup.js"></script>
+</body>
+
+</html>
